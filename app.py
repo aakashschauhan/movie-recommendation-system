@@ -7,12 +7,24 @@ import os
 
 # st.write("Loaded secrets:", st.secrets)
 
-file_id = "1oH2PWoTzBysPForX0PX7qz4N-MvwuLeI"
-url = f"https://drive.google.com/uc?id={file_id}"
-output = "similarity.pkl"
+movies_file_id = "1pr4MvTx29OVTwszAlq70fGTvY9AaXIyv"
+movies_url = f"https://drive.google.com/uc?id={movies_file_id}"
+movies_output = "movies.pkl"
 
-if not os.path.exists(output):
-    gdown.download(url, output, quiet=False)
+if not os.path.exists(movies_output):
+    gdown.download(movies_url, movies_output, quiet=False)
+
+movies = pickle.load(open(movies_output, 'rb'))
+
+# Similarity.pkl
+similarity_file_id = "1oH2PWoTzBysPForX0PX7qz4N-MvwuLeI"
+similarity_url = f"https://drive.google.com/uc?id={similarity_file_id}"
+similarity_output = "similarity.pkl"
+
+if not os.path.exists(similarity_output):
+    gdown.download(similarity_url, similarity_output, quiet=False)
+
+similarity = pickle.load(open(similarity_output, 'rb'))
 
 def fetch_poster(movie_id):
     api_key = st.secrets["TMDB_API_KEY"]
