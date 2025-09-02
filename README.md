@@ -3,7 +3,7 @@
 An AI-powered **Movie Recommendation System** built with **Python, Streamlit, and TMDB API**.  
 The system recommends 5 similar movies based on content similarity (cosine similarity of movie metadata).  
 
-🔗 **Live Demo**: [Streamlit App](https://share.streamlit.io/aakashschauhan/movie-recommendation-system)  
+🔗 **Live Demo**: [Streamlit App](https://movie-recommendation-system-aakash.streamlit.app/)  
 📂 **Dataset**: Movies metadata and similarity matrix stored externally via Google Drive.  
 
 ---
@@ -95,10 +95,6 @@ streamlit run app.py
 
 ---
 
-## 📸 Demo Screenshots  
-*(Add screenshots here after running your app locally)*  
-
----
 
 ## 🤝 Contributing  
 Pull requests are welcome! For major changes, open an issue first to discuss.  
